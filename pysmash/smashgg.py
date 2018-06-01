@@ -1,4 +1,4 @@
-from pysmash import tournaments, brackets, exceptions
+from pysmash import tournaments, brackets, entrant, player, exceptions
 
 
 class SmashGG(object):
@@ -79,3 +79,17 @@ class SmashGG(object):
         if event == '':
             event = self.event
         return event
+
+    # entrant endpoints
+    def entrant_show_id(self, entrant_id):
+        """Shows a players smashgg playerId based on an event's ID"""
+        return entrant.show_id(entrant_id)
+
+    # player endpoints
+    def player_show_region(self, player_id):
+        """Shows a players region based on their smashgg id"""
+        return player.show_region(player_id)
+
+    def player_show_gamerTag(self, player_id):
+        """Shows a players current smashgg gamerTag"""
+        return player.show_gamerTag(player_id)

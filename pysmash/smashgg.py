@@ -1,6 +1,5 @@
 from pysmash import tournaments, brackets, entrant, player, exceptions
 
-
 class SmashGG(object):
 
     def __init__(self, default_event='', key="", secret=""):
@@ -86,6 +85,10 @@ class SmashGG(object):
         return entrant.show_id(entrant_id)
 
     # player endpoints
+    def player_show_player(self, player_id): 
+        """Shows a complete player object based on their smashgg id"""
+        return player.show_player(player_id)
+    
     def player_show_region(self, player_id):
         """Shows a players region based on their smashgg id"""
         return player.show_region(player_id)

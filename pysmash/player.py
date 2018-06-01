@@ -1,6 +1,14 @@
 from pysmash import api, brackets, utils
 PLAYER_PREFIX = 'player/'
 
+def show_player(player_id):
+    uri = PLAYER_PREFIX + str(player_id)
+
+    response = api.get(uri)
+    
+    return response
+
+
 def show_region(player_id):
     uri = PLAYER_PREFIX + str(player_id)
 

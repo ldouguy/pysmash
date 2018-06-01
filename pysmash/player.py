@@ -12,11 +12,11 @@ def show_region(player_id):
 
     result = region
 
-    if region is None and state is None:
-        result = country
-
     if region is None:
         result = state
+
+    if region is None and state is None:
+        result = country
 
     return result
 
